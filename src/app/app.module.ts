@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ContactosComponent } from './components/contactos/contactos.component';
+import { E404Component } from './components/e404/e404.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { PrecioComponent } from './components/precio/precio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductsComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContactosComponent,
+    E404Component,
+    NosotrosComponent,
+    PrecioComponent
   ],
   imports: [
     BrowserModule,
