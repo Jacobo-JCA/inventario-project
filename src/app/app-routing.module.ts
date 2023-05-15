@@ -6,7 +6,6 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 const routes: Routes = [
 
   {path: 'home', component: HomeComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'nosotros', component: NosotrosComponent}
 
 ];
