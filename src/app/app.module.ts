@@ -10,6 +10,7 @@ import { E404Component } from './components/e404/e404.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PrecioComponent } from './components/precio/precio.component';
 import { CombosComponent } from './components/combos/combos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CombosComponent } from './components/combos/combos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
