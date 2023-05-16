@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { CombosComponent } from './components/combos/combos.component';
+import { E404Component } from './components/e404/e404.component';
 
 const routes: Routes = [
 
@@ -15,7 +16,7 @@ const routes: Routes = [
 
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: '**', pathMatch: 'full', redirectTo: 'home'}
+  {path: '**', component:E404Component}
 
 ];
 
