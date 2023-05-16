@@ -6,6 +6,8 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { CombosComponent } from './components/combos/combos.component';
 import { E404Component } from './components/e404/e404.component';
+import { AdministrarProductosComponent } from './components/administrar-productos/administrar-productos.component';
+import { VentasComponent } from './components/ventas/ventas.component';
 
 const routes: Routes = [
 
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path: 'nosotros', component: NosotrosComponent},
   {path: 'contactos', component: ContactosComponent},
   {path: 'combos', component: CombosComponent},
+  {path: 'administrar', component: AdministrarProductosComponent},
+  {path: 'ventas', component: VentasComponent},
 
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},
