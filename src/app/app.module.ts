@@ -9,6 +9,8 @@ import { ContactosComponent } from './components/contactos/contactos.component';
 import { E404Component } from './components/e404/e404.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { CombosComponent } from './components/combos/combos.component';
+import { AdministrarProductosComponent } from './components/administrar-productos/administrar-productos.component';
+import { VentasComponent } from './components/ventas/ventas.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CombosComponent } from './components/combos/combos.component';
     ContactosComponent,
     E404Component,
     NosotrosComponent,
-    CombosComponent
+    CombosComponent,
+    AdministrarProductosComponent,
+    VentasComponent
   ],
   imports: [
     BrowserModule,
