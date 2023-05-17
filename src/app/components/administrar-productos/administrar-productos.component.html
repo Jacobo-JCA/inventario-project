@@ -1,2 +1,30 @@
-<p>administrar-productos works!</p>
-<p>ds</p>
+<nav class="navbar-expand-sm navbar-dark bg-dark p-0" style="height: 80px;">
+    <div class="container" style="display: flex; align-items: center; height: 80px;">
+            <h1 style="color: aliceblue; font-family: 30px;">Tienda en línea</h1>
+        <div class="navbar-cart" (click)="onToggleCart()">
+            <div class="navbar-cart-items">
+                <p style="color: white;">0</p>
+            </div>
+            <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
+        </div>
+    </div>
+</nav>
+
+<div class="cart" [ngClass]="{show:viewCart}"> 
+    <app-cart></app-cart>
+</div>
+
+<div class="card-container">
+    <div class="card" style="width: 18rem;" *ngFor="let beer of dataBeer">
+        <img src={{beer.image}}>
+        <div class="card-body">
+            <div>
+                <p>Nombre: {{beer.name}}</p>
+                <p>Precio: {{beer.price}}</p>
+                <button class="beer-button" (click)="addToCart(beer)">
+                    <i class="fas fa-shopping-cart" style="color: rgb(44, 92, 52);"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

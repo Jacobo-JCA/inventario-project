@@ -8,9 +8,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { E404Component } from './components/e404/e404.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
-import { PrecioComponent } from './components/precio/precio.component';
-import { CombosComponent } from './components/combos/combos.component';
+import { AdministrarProductosComponent } from './components/administrar-productos/administrar-productos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './components/cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
     ContactosComponent,
     E404Component,
     NosotrosComponent,
-    PrecioComponent,
-    CombosComponent
+    AdministrarProductosComponent,
+    CartComponent
+
+
   ],
   imports: [
     BrowserModule,
