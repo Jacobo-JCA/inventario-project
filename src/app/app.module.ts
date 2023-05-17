@@ -10,7 +10,7 @@ import { ContactosComponent } from './components/contactos/contactos.component';
 import { E404Component } from './components/e404/e404.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PrecioComponent } from './components/precio/precio.component';
-import { CombosComponent } from './components/combos/combos.component';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +21,8 @@ import { CombosComponent } from './components/combos/combos.component';
     ContactosComponent,
     E404Component,
     NosotrosComponent,
-    PrecioComponent,
-    CombosComponent
+    PrecioComponent
+
   ],
   imports: [
     BrowserModule,
