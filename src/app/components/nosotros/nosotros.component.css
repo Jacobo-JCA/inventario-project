@@ -1,0 +1,20 @@
+h3 {
+    font-weight: bold;
+    color: blue;
+}
+p {
+    font-family: 'Lobster', cursive;
+    
+}
+
+bo{
+    background-image: url("https://i.pinimg.com/736x/22/9f/b5/229fb59f85fb45e139e851cb9d77f6f5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.7;
+}
+h2{
+    background-image: url("https://thumbs.dreamstime.com/b/espuma-blanca-con-macro-de-la-textura-del-fondo-de-las-burbujas-de-aire-37630527.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
