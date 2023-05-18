@@ -17,6 +17,7 @@ import { SesionComponent } from './components/sesion/sesion.component';
 import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { Router } from '@angular/router';
     AdministrarProductosComponent,
     CartComponent,
     ProfileComponent,
-    SesionComponent
+    SesionComponent,
+    FormComponent
 
 
   ],

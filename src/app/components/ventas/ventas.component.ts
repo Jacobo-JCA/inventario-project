@@ -10,7 +10,7 @@ export class VentasComponent {
 
   constructor(private servicio: VentasService) { }
 
-  dataVentas: any;
+  dataVentas: any={};
 
   ngOnInit(): void {
     this.servicio.getClientes().subscribe(data=>{

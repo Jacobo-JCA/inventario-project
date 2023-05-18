@@ -1,0 +1,44 @@
+{
+  "products": [
+  {
+    "id": 1,
+    "first_name": "Locke",
+    "last_name": "Escale",
+    "email": "lescale0@umn.edu",
+    "gender": "Male",
+    "product": "Tart Shells - Savory, 2"
+  },
+  {
+    "id": 2,
+    "first_name": "Florenza",
+    "last_name": "Brickett",
+    "email": "fbrickett1@whitehouse.gov",
+    "gender": "Female",
+    "product": "Wine - Zinfandel Rosenblum"
+  },
+  {
+    "id": 3,
+    "first_name": "Lynde",
+    "last_name": "Chiplen",
+    "email": "lchiplen2@usgs.gov",
+    "gender": "Female",
+    "product": "Trout - Rainbow, Frozen"
+  },
+  {
+    "id": 4,
+    "first_name": "Findlay",
+    "last_name": "Conrad",
+    "email": "fconrad3@typepad.com",
+    "gender": "Genderfluid",
+    "product": "Bagel - Everything Presliced"
+  },
+  {
+    "id": 5,
+    "first_name": "Patrica",
+    "last_name": "McCreedy",
+    "email": "pmccreedy4@rediff.com",
+    "gender": "Non-binary",
+    "product": "Spice - Pepper Portions"
+  }
+]
+}

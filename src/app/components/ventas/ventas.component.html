@@ -1,23 +1,21 @@
 <div class="container">
-  <h2>Nosotros</h2>
-  <p>Personal de trabajo</p>
   <table class="table">
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Edad</th>
-        <th>Ciudad</th>
+        <th>Id</th>
+        <th>Product</th>
+        <th>Name</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of dataVentas.results">
-        <td>{{item.name.first}}</td>
-
+        <td>{{item.id}}</td>
+        <td>{{item.product}}</td>
+        <td>{{item.first_name}}</td>
       </tr>
     </tbody>
   </table>
 </div>
-
 
 
 
