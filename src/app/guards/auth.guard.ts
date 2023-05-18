@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
       return true
     }
     else{
-      this.ruta.navigate(['/registro'])
+      this.ruta.navigate(['/sesion'])
       return false;
     }
       
