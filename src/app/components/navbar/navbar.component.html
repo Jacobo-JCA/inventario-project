@@ -30,11 +30,21 @@
           <a class="navbar-item" href="contactos">
             Contactos
           </a>
-          <a class="navbar-item" href="sesion">
-            Sesion
-          </a>
+
+          <ng-container *ngIf="login=='false'; else aux">
+            <li class="nav-item">
+              <a class="nav-link" href="login">Login</a>    
+            </li>
+          </ng-container>
+
+          <ng-template #aux>
+            <li class="nav-item">
+              <a class="nav-link" href="login">LogOut</a>
+            </li>
+          </ng-template>
         </div>
       </div>
     </div>
   </div>
 </nav>
+

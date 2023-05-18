@@ -3,11 +3,11 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-sesion',
-  templateUrl: './sesion.component.html',
-  styleUrls: ['./sesion.component.css']
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css']
 })
-export class SesionComponent {
+export class RegistroComponent {
 
   constructor( private servicio: AuthService, private ruta: Router){}
   
@@ -39,7 +39,7 @@ export class SesionComponent {
         if( JSON.stringify(doc) == JSON.stringify(aux) ){
           console.log("Encontrado")
           localStorage.setItem('login', 'true')
-          this.ruta.navigate(['/administracion'])
+          this.ruta.navigate(['/administrar'])
           break;
         }else{
           localStorage.setItem('login','false')
@@ -50,5 +50,3 @@ export class SesionComponent {
 
   }
 }
-
-
