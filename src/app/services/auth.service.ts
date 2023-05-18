@@ -1,37 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from './../user.interface';
+
+import {Observable} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() { }
+  constructor( private http:HttpClient) { }
 
-  login(email: string, password: string): boolean {
-    // Realiza la lógica de autenticación con la API o servicio correspondiente
-    // Puedes comparar el email y la contraseña ingresados con los datos almacenados en tu sistema
+  private API_ALIAS="http://localhost:3000/user"
 
-    // Ejemplo de verificación básica:
-    const user: User = {
-      id: 1,
-      email: 'jc@gmail.com',
-      password: 'admin'
-    };
-
-    if (email === user.email && password === user.password) {
-      localStorage.setItem('id', user.id.toString());
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  logout(): void {
-    localStorage.removeItem('id');
-  }
-
-  isAuthenticated(): boolean {
-    return localStorage.getItem('id') !== null;
+  getAlias():Observable<any>{
+    return this.http.get(this.API_ALIAS);
   }
 }

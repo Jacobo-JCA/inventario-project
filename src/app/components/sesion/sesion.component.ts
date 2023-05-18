@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from './../../services/auth.service';
-import { User } from './../../user.interface';
+import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,20 +9,47 @@ import { Router } from '@angular/router';
 })
 export class SesionComponent {
 
-  email: string = '';
-  password: string = '';
+  constructor( private servicio: AuthService, private ruta: Router){}
+  
 
-  constructor(private authService: AuthService, private router: Router) { }
+  alias:string=""
+  pass:string=""
 
-  login(): void {
-      const isAuthenticated = this.authService.login(this.email, this.password);
-        
-      if (isAuthenticated) {
-        console.log('Inicio de sesión exitoso');
-        this.router.navigate(['/administrar']);
-        // Redirigir al usuario a la página de administración u otra página deseada
-      } else {
-        console.log('Credenciales inválidas');
+  guardarJSON(){
+    const temp={
+      id: this.alias,
+      pass: this.pass
+    }
+    this.limpiar()
+    
+    return temp;
+  }
+
+  //LIMPIAR INPUTS
+  limpiar(){
+    this.alias=""
+    this.pass=""
+  }
+
+  login(){
+    const aux= this.guardarJSON()
+
+    this.servicio.getAlias().subscribe( p=>{
+      for( const doc of p ){
+        if( JSON.stringify(doc) == JSON.stringify(aux) ){
+          console.log("Encontrado")
+          localStorage.setItem('sesion', 'true')
+          this.ruta.navigate(['/administrar'])
+          break;
+        }else{
+          localStorage.setItem('sesion','false')
+          this.ruta.navigate(['/registro'])
+        }
       }
+    })
+
+    
   }
 }
+
+
