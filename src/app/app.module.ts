@@ -11,6 +11,13 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { AdministrarProductosComponent } from './components/administrar-productos/administrar-productos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './components/cart/cart.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SesionComponent } from './components/sesion/sesion.component';
+import { CookieService } from 'ngx-cookie-service';
+import { FormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @NgModule({
@@ -22,16 +29,21 @@ import { CartComponent } from './components/cart/cart.component';
     E404Component,
     NosotrosComponent,
     AdministrarProductosComponent,
-    CartComponent
+    CartComponent,
+    ProfileComponent,
+    SesionComponent
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    RouterModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

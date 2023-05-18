@@ -24,7 +24,7 @@ export class ProductsService {
   
   addBeer(beer: any) {
     if(this.myList.length === 0) {
-      beer.cantidad = 1
+      beer.id = 1
       this.myList.push(beer)
       this.myCart.next(this.myList);
     } else{
@@ -32,15 +32,36 @@ export class ProductsService {
         return element.id === beer.id
       })
       if(beerMod) {
-        beerMod.cantidad = beerMod.cantidad + 1;
+        beerMod.id = beerMod.id + 1;
         this.myCart.next(this.myList);
       }else{
-        beer.cantidad = 1;
+        beer.id = 1;
         this.myList.push(beer);
         this.myCart.next(this.myList);
       }
     }
   
     
+  }
+
+  deleteProduct(id:number) {
+    this.myList = this.myList.filter((beer)=>{
+      return beer.id != id
+    })
+    this.myCart.next(this.myList);
+  }
+
+  totalCart() {
+    const total = this.myList.reduce(function (acc, beer) {
+      const beerId = parseFloat(beer.id);
+      const fragmento = beer.price.substring(1, );
+      if (!isNaN(beerId) && !isNaN(fragmento)) {
+        return acc + (beerId * fragmento);
+      }
+      return acc;
+    }, 0);
+  
+    console.log(total);
+    return total;
   }
 }
