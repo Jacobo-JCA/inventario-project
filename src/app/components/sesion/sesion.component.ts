@@ -38,16 +38,17 @@ export class SesionComponent {
       for( const doc of p ){
         if( JSON.stringify(doc) == JSON.stringify(aux) ){
           console.log("Encontrado")
-          localStorage.setItem('login', 'true')
-          this.ruta.navigate(['/administracion'])
+          localStorage.setItem('sesion', 'true')
+          this.ruta.navigate(['/administrar'])
           break;
         }else{
-          localStorage.setItem('login','false')
+          localStorage.setItem('sesion','false')
           this.ruta.navigate(['/registro'])
         }
       }
     })
 
+    
   }
 }
 
