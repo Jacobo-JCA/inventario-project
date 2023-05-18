@@ -15,7 +15,6 @@ export class AuthService {
     // Ejemplo de verificación básica:
     const user: User = {
       id: 1,
-      name: 'John Doe',
       email: 'jc@gmail.com',
       password: 'admin'
     };
