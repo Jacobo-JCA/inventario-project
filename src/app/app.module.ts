@@ -15,14 +15,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { SesionComponent } from './components/sesion/sesion.component';
-<<<<<<< HEAD
-import { FormsModule } from '@angular/forms'
-import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
-import { FormComponent } from './components/form/form.component';
-=======
 import { RegistroComponent } from './components/registro/registro.component'
->>>>>>> Jacob666
 
 
 @NgModule({
@@ -35,14 +28,8 @@ import { RegistroComponent } from './components/registro/registro.component'
     NosotrosComponent,
     AdministrarProductosComponent,
     CartComponent,
-<<<<<<< HEAD
-    ProfileComponent,
-    SesionComponent,
-    FormComponent
-=======
     SesionComponent,
     RegistroComponent
->>>>>>> Jacob666
 
 
   ],
