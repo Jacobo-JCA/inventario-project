@@ -17,10 +17,11 @@ export class AuthGuard implements CanActivate {
     
     const acceso= localStorage.getItem('sesion')
     if(acceso === 'true'){
+      
       return true
     }
     else{
-      this.ruta.navigate(['/sesion'])
+      this.ruta.navigate(['/registro'])
       return false;
     }
       
