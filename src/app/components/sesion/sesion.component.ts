@@ -16,20 +16,14 @@ export class SesionComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
   login(): void {
-    const isAuthenticated = this.authService.login(this.email, this.password);
-
-    if (isAuthenticated) {
-      console.log('Inicio de sesión exitoso');
-      const user: User = {
-        id: 1,
-        name: 'John Doe',
-        email: this.email,
-        password: this.password
-      };
-      this.router.navigate(['/administrar']);
-      // Redirigir al usuario a la página de administración u otra página deseada
-    } else {
-      console.log('Credenciales inválidas');
-    }
+      const isAuthenticated = this.authService.login(this.email, this.password);
+        
+      if (isAuthenticated) {
+        console.log('Inicio de sesión exitoso');
+        this.router.navigate(['/administrar']);
+        // Redirigir al usuario a la página de administración u otra página deseada
+      } else {
+        console.log('Credenciales inválidas');
+      }
   }
 }
