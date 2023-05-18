@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-administrar-productos',
@@ -18,6 +19,12 @@ export class AdministrarProductosComponent {
     this.servicio.getBeer().subscribe(beer => {
       this.dataBeer=beer
     })
+  }
+
+  login(form:NgForm) {
+    const username= form.value.text
+
+    const password= form.value.password
   }
 
   onToggleCart(){
