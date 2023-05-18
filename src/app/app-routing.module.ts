@@ -19,11 +19,7 @@ const routes: Routes = [
   { path: 'ventas', component: VentasComponent},
   { path: 'administrar', component: AdministrarProductosComponent, canActivate:[AuthGuard]},
   { path: 'sesion', component: SesionComponent },
-<<<<<<< HEAD
   {path: 'form', component: FormComponent},
-=======
-  { path: 'registro', component: RegistroComponent},
->>>>>>> Jacob666
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
