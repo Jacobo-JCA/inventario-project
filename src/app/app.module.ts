@@ -14,7 +14,6 @@ import { CartComponent } from './components/cart/cart.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SesionComponent } from './components/sesion/sesion.component';
-import { CookieService } from 'ngx-cookie-service';
 import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
@@ -43,7 +42,7 @@ import { Router } from '@angular/router';
     RouterModule,
     FormsModule
   ],
-  providers: [CookieService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
